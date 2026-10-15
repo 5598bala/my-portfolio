@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bala | Python Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#home" class="logo">&lt;<span>py</span>/&gt;</a>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="menu-btn" aria-label="Toggle menu">&#9776;</button>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p class="hello">Hello, I'm</p>
+      <h1>Your Name</h1>
+      <h2>I'm a <span id="typing"></span><span class="cursor">|</span></h2>
+      <p class="intro">
+        I build clean, scalable backends, automate boring things and
+        turn data into useful products using Python.
+      </p>
+      <div class="buttons">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="#contact" class="btn outline">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="code-window">
+      <div class="window-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <small>developer.py</small>
+      </div>
+<pre><code><span class="c"># developer.py</span>
+<span class="k">class</span> <span class="f">Developer</span>:
+    <span class="k">def</span> <span class="f">__init__</span>(self):
+        self.name = <span class="s">"Your Name"</span>
+        self.role = <span class="s">"Python Developer"</span>
+        self.stack = [<span class="s">"Django"</span>, <span class="s">"FastAPI"</span>,
+                      <span class="s">"Pandas"</span>, <span class="s">"SQL"</span>]
+        self.coffee = <span class="n">True</span>
+
+    <span class="k">def</span> <span class="f">build</span>(self, idea):
+        <span class="k">return</span> <span class="s">f"{idea} shipped 🚀"</span>
+
+me = Developer()
+<span class="f">print</span>(me.build(<span class="s">"Your next project"</span>))</code></pre>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h3 class="title">About <span>Me</span></h3>
+    <div class="about-grid">
+      <p>
+        I'm a Python developer with a passion for solving real-world problems
+        through code. I enjoy building REST APIs, web apps, automation scripts
+        and data tools. I care about readable code, testing and continuous learning.
+      </p>
+      <div class="stats">
+        <div class="stat"><h4 data-count="3">0</h4><p>Years Experience</p></div>
+        <div class="stat"><h4 data-count="25">0</h4><p>Projects Built</p></div>
+        <div class="stat"><h4 data-count="10">0</h4><p>Happy Clients</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section dark">
+    <h3 class="title">My <span>Skills</span></h3>
+    <div class="skills">
+      <div class="skill"><div class="skill-info"><span>Python</span><span>95%</span></div><div class="bar"><div class="fill" data-width="95"></div></div></div>
+      <div class="skill"><div class="skill-info"><span>Django / Flask</span><span>90%</span></div><div class="bar"><div class="fill" data-width="90"></div></div></div>
+      <div class="skill"><div class="skill-info"><span>FastAPI</span><span>85%</span></div><div class="bar"><div class="fill" data-width="85"></div></div></div>
+      <div class="skill"><div class="skill-info"><span>Pandas / NumPy</span><span>80%</span></div><div class="bar"><div class="fill" data-width="80"></div></div></div>
+      <div class="skill"><div class="skill-info"><span>SQL / PostgreSQL</span><span>85%</span></div><div class="bar"><div class="fill" data-width="85"></div></div></div>
+      <div class="skill"><div class="skill-info"><span>Git / Docker</span><span>75%</span></div><div class="bar"><div class="fill" data-width="75"></div></div></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h3 class="title">My <span>Projects</span></h3>
+    <div class="cards">
+      <article class="card">
+        <div class="icon">🌐</div>
+        <h4>E-Commerce API</h4>
+        <p>REST API with authentication, payments and admin dashboard.</p>
+        <div class="tags"><span>Django</span><span>DRF</span><span>PostgreSQL</span></div>
+        <a href="#" class="link">View on GitHub →</a>
+      </article>
+      <article class="card">
+        <div class="icon">📊</div>
+        <h4>Data Dashboard</h4>
+        <p>Interactive analytics dashboard that turns raw CSV data into insights.</p>
+        <div class="tags"><span>Pandas</span><span>Plotly</span><span>Streamlit</span></div>
+        <a href="#" class="link">View on GitHub →</a>
+      </article>
+      <article class="card">
+        <div class="icon">🤖</div>
+        <h4>Automation Bot</h4>
+        <p>Script that scrapes websites and sends daily reports automatically.</p>
+        <div class="tags"><span>Selenium</span><span>BeautifulSoup</span><span>Celery</span></div>
+        <a href="#" class="link">View on GitHub →</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section dark">
+    <h3 class="title">Contact <span>Me</span></h3>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn primary">Send Message</button>
+      <p id="form-msg"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> Your Name · Built with <span class="heart">♥</span> and Python vibes</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
